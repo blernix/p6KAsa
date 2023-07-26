@@ -12,16 +12,16 @@ import {BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 function App() {
     return (
       <div className='App'>
-        <Nav />
         <Router>
+        <Nav />
           <Routes>
             <Route path='/' element ={<Home  /> } />
             <Route path='/about' element ={<About /> } />
             <Route path='/accomodation' element ={<Accomodation /> } />
             <Route path='/*' element ={<Nofound /> } />
           </Routes>
+          <Footer />  
         </Router>
-        <Footer />
       </div>
     );
 }
