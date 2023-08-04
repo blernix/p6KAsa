@@ -15,7 +15,7 @@ const Collapse = ({title, content}) => {
                 <h2>{title}</h2>
                 <img className={`arrow ${isOpen ? 'arrow-open' : ''}`} src={Arrow} alt=""></img>
             </div>
-            <ul className={isOpen ? 'descriptionCollapse' : 'descriptionCollapse_hidden'}>
+            <ul className={isOpen ? 'description-collapse' : 'description-collapse_hidden'}>
           {Array.isArray(content) ? content.map((item, index) => {
             return (
               <li key={index}>{item}</li>
@@ -32,5 +32,5 @@ export default Collapse;
 Collapse.propTypes = {
     id: PropTypes.string,
     title: PropTypes.string.isRequired,
-    content: PropTypes.string.isRequired,
+    content: PropTypes.oneOfType([PropTypes.string, PropTypes.array]).isRequired,
 }

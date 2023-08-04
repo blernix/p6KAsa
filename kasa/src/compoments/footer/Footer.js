@@ -4,7 +4,7 @@ import '../../compoments/footer/Footer.scss'
 function Footer() {
     return (
         <div className='footer'>
-        <div className='navLogo'>
+        <div className='nav-logo'>
         <img src={logo} alt='Kasa' className='kasa-logonoir' />
         </div>
         <div className='copyright'>

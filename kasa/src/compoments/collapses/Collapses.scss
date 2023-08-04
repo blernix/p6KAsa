@@ -3,6 +3,7 @@
     color: white;
     border-radius: 5px;
     line-height: 0;
+    
 }
 
 
@@ -13,7 +14,7 @@
 .arrow {
     height: 10px;
     width: 20px;
-    transition: 0.8s ease-in-out ;
+    transition: 0.3s ease-in-out ;
 }
 
 .title-collapse {
@@ -23,7 +24,7 @@
     padding: 10px 10px 0 10px;
 }
 
-.descriptionCollapse {
+.description-collapse {
     display: block;
     line-height: 1.5em;
     text-align: left;
@@ -34,11 +35,51 @@
     list-style-type: none;
 }
 
-.descriptionCollapse_hidden {
+.description-collapse_hidden {
     opacity: 0%;
 }
 
 .arrow-open {
     transform: rotate(180deg);
-    transition: 0.8s ease-in-out;
+    transition: 0.3s ease-in-out;
   }
+  @media screen and (min-width: 768px)and (max-width: 900px){
+     
+    .container-collapses {
+        margin: 20px;
+    }
+}
+
+@media screen and (max-width: 768px){
+
+
+    .container-collapses {
+        margin: 5px;
+    }
+
+    .description-collapse_hidden {
+        opacity: 0%;
+        height: 20px;    
+    }
+    .collapse img {
+        cursor: pointer;
+    }
+    .description-collapse {
+        animation: opacity 1.2s;
+        padding: 5% 3% 10% 3%;
+        line-height: 22px;
+        font-size: 14px;
+        border-radius: 0px 0px 10px 10px;
+    }
+
+    .title-collapse {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #FF6060;
+        color: white;
+        padding: 2.5%;
+    }
+
+
+}
